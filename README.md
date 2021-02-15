@@ -22,6 +22,7 @@
 - [Generate 100 Messages to Dead-letter Queue For Testing](#-Generate-100-Messages-to-Dead-letter-Queue-For-Testing)
 - [Move All Messages At Once](#-Move-All-Messages-At-Once)
 - [Move Half Messages To Avoid Workload](#-Move-Half-Messages-To-Avoid-Workload)
+- [Destroy Test Queues](#-Destroy-Test-Queues)
 ---
 ### 🚀 **[Create SQS queues using CDK](#-Create-SQS-queues-using-CDK)**
 **1. Init  CDK project**
@@ -255,6 +256,17 @@ Writing 10 messages to https://sqs.ap-northeast-2.amazonaws.com/111111111111/my_
 'Done'
 ```
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/aiju9ljei38ll8xz4lng.png)
+
+### 🚀 **[Destroy Test Queues](#-Destroy-Test-Queues)**
+```
+⚡ $ cdk destroy 
+Are you sure you want to delete: sqs-stack (y/n)? y
+sqs-stack: destroying...
+11:31:35 PM | DELETE_IN_PROGRESS   | AWS::CloudFormation::Stack | sqs-stack
+11:31:35 PM | DELETE_IN_PROGRESS   | AWS::CloudFormation::Stack | sqs-stack
+11:32:38 PM | DELETE_IN_PROGRESS   | AWS::SQS::Queue    | SQSTestDLQueueMovingMsg
+ ✅  sqs-stack: destroyed
+```
 
 <h3 align="center">
   <a href="https://dev.to/vumdao">:stars: Blog</a>
