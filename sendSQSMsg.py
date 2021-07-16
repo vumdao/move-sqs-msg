@@ -13,7 +13,7 @@ def gen_msg():
 
 
 sqs_client = boto3.client("sqs", region_name='ap-northeast-2')
-sqs_url = 'https://sqs.ap-northeast-2.amazonaws.com/661798210997/my_queue_dl_test'
+sqs_url = 'https://sqs.ap-northeast-2.amazonaws.com/123456789012/my_queue_dl_test'
 while True:
     for message_batch in gen_msg():
         sqs_client.send_message_batch(
